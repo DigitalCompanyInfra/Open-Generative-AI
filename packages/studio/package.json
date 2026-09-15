@@ -4,13 +4,35 @@
   "description": "Open Generative AI studio components for Muapi",
   "main": "src/index.js",
   "module": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json",
+    "./dist/tailwind.css": "./dist/tailwind.css",
+    "./ImageStudio": "./src/components/ImageStudio.jsx",
+    "./VideoStudio": "./src/components/VideoStudio.jsx",
+    "./AudioStudio": "./src/components/AudioStudio.jsx",
+    "./ClippingStudio": "./src/components/ClippingStudio.jsx",
+    "./VibeMotionStudio": "./src/components/VibeMotionStudio.jsx",
+    "./LipSyncStudio": "./src/components/LipSyncStudio.jsx",
+    "./RecastStudio": "./src/components/RecastStudio.jsx",
+    "./CinemaStudio": "./src/components/CinemaStudio.jsx",
+    "./MarketingStudio": "./src/components/MarketingStudio.jsx",
+    "./WorkflowStudio": "./src/components/WorkflowStudio.jsx",
+    "./AgentStudio": "./src/components/AgentStudio.jsx",
+    "./DesignAgentStudio": "./src/components/DesignAgentStudio.jsx",
+    "./AppsStudio": "./src/components/AppsStudio.jsx",
+    "./McpCliStudio": "./src/components/McpCliStudio.jsx",
+    "./AiInfluencerStudio": "./src/components/AiInfluencerStudio.jsx",
+    "./LayersStudio": "./src/components/LayersStudio.jsx",
+    "./MotionControlStudio": "./src/components/MotionControlStudio.jsx"
+  },
   "files": [
     "src",
     "dist"
   ],
   "scripts": {
-    "build:css": "tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --minify",
-    "build": "npm run build:css && babel src --out-dir dist --extensions .js,.jsx"
+    "build:css": "node init && tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --minify",
+    "build": "node init && npm run build:css && babel src --out-dir dist --extensions .js,.jsx"
   },
   "license": "MIT",
   "dependencies": {
